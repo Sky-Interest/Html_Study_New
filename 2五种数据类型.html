@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //整形
+        var a = 5;
+        //布尔类型
+        var b = true;
+        //字符串
+        var c = "hello";
+        //对象型
+        var d = new Date();//内置对象 无需引入导入的类即可使用的对象 类似的还有 String/Regex/Number这些
+        //null类型
+        var e = null;
+
+        //分别输出这些值
+        document.write(a+"<br>");
+        document.write(b+"<br>");
+        document.write(c+"<br>");
+        document.write(d+"<br>");
+        document.write(e+"<br>");
+
+        
+        document.write("类型" +typeof(a)+"<br>");
+        document.write("类型" +typeof(b)+"<br>");
+        document.write("类型" +typeof(c)+"<br>");
+        document.write("类型" +typeof(d)+"<br>");
+        document.write("类型" +typeof(e)+"<br>");
+
+        //null和undifine
+        var f;//只声明，未赋值  没有值，不知道类型是什么
+        document.write("值:" + f + ",类型" +typeof(f)+"<br>")
+
+        document.write(e == f);//== 是判断值的，没有判断地址   
+        document.write(e === f);//=== 既判断值，也判断类型 
+    </script>
+</body>
+</html>

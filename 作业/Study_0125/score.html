@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>统计考试科目的成绩</title>
+</head>
+<body>
+<input name="btn" type="button" value="统计考试成绩" onclick="count(prompt('请输入考试科目数量'));" />
+<script type="text/javascript">
+    function count(num) {  
+        if (num >= 1 && num <= 3) {  
+            var scores = [];  
+            for (var i = 0; i < num; i++) {  
+                var score = prompt("请输入科目" + (i + 1) + "的成绩：");  
+                scores.push(score);  
+            }  
+            var sum = 0;  
+            for (var j = 0; j < scores.length; j++) {  
+                sum += parseInt(scores[j]);  
+            }  
+            alert("三个科目的成绩总和为：" + sum);  
+        } else {  
+            alert("请输入正确的科目数量！");  
+        }  
+    }  
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>统计包含“a”或“A”的字符串的个数</title>
+</head>
+<body>
+<script type="text/javascript">
+    arr = prompt("请输入字符串");
+    console.log("字符串:"+arr);
+    r = arr.split("");
+    var count = 0;
+    for(var i=0; i<r.length; i++){
+        if(r[i]=='a'||r[i]=='A'){
+            count++;
+        }
+    }
+    console.log("aA计数器:"+count);
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>编写四则运算</title>
+</head>
+<body>
+<input name="btn" type="button" value="计算两数运算结果" onclick="account();" />
+<script type="text/javascript">
+    
+    function account(){
+        var a = parseInt(prompt("请输入第一个数"));
+        var c = prompt("请输入运算符(+-*\\):");
+        var b = parseInt(prompt("请输入第二个数"));
+    if(c == '+'){
+        temp = a + b; 
+        console.log("加法:"+temp);
+    }else if(c == '-'){
+        temp = a - b;
+        console.log("减法"+temp);
+    }else if(c == '*'){
+        temp = a * b;
+        console.log("乘法"+temp);
+    }else if(c == '/'){
+        if(parseInt(b) == 0){
+            console.log("不可除0");
+        }else{
+            temp = a / b;
+        console.log("除法"+temp);
+        }
+    }else{
+        console.log("输入符号有误");
+    }
+}
+
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        fun1();
+        //声明函数 使用function(){}
+        function fun1(){
+            console.log("fun1")
+        }
+
+        //fun1();//调用函数
+
+        // 函数表达式和函数声明不一样的是函数表达式不能提高调用 ！
+        // fun2(); //报 fun2 is not a function
+        //2函数表达式
+        //将一个函数赋值给一个变量
+        var fun2 = function(){
+            console.log("fun2");
+        }
+
+        fun2();
+
+        //3使用new Function关键字 这种非常少用，不常见
+        var fun3 = new Function("a","b","console.log(a+b)");
+        fun3(3,5);
+
+        //4 匿名函数，没有函数，自调用
+        (function(){
+            console.log("自调用，文档加载到此处即调用，不请自来！")
+        })()
+    </script>
+</body>
+</html>

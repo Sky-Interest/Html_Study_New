@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1 = "1.3";
+        var num2 = "2.4";
+
+        document.write(num1+num2);//字符串相加
+
+        //转换整数
+        var num3 = parseInt(num1)+parseInt(num2);
+        document.write("<br>"+num3+"<br>");
+
+        //转成浮点
+        // var num4 = parseFloat(num1) + parseFloat(num2);
+        //document.write("<br>"+num4+"<br>");
+
+        //判断
+        //NaN is Not a number  如果不是数字，返回真
+        if(isNaN(num1)){
+            document.write("不是数字,"+typeof(num1));
+        }else{
+            var num4 = parseFloat(num1) + parseFloat(num2);
+            document.write("是数字,结果:" + num4);
+        }
+
+        var num5 = "abc";
+        //不要直接转，要先判断
+        document.write(parseInt(num5));
+
+    </script>
+</body>
+</html>

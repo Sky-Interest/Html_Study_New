@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = 0;//除了0都是真
+        if(a){
+            document.write(a+"为真")
+        }else{
+            document.write(a+"为假")
+        }
+
+        document.write("<br>");
+        var b = "";//字符串长度为0就是假，大于0为真
+        if(b){
+            document.write("->" + b+"为真") 
+        }else{
+            document.write("->" + b+"为假") 
+        }
+
+        //对象null为假，其余为真
+        var c = null;
+        if(c==null){
+            document.write("->" + c+"为假") 
+        }else{
+            document.write("->" + c+"为真") 
+        }
+
+        document.write("<br>");
+        //swith
+        var d = 13;
+        switch(d){
+            case 0:
+                document.write("是0");
+                break;
+            case 1:
+                document.write("是1");
+                break;  
+            case 2:
+                document.write("是2");
+                break; 
+            case 3:
+                document.write("是3");
+                break; 
+            default:
+                document.write("其它的值");  
+        }
+
+    </script>
+</body>
+</html>

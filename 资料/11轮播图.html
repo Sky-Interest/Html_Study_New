@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        #container{
+            margin-left: 630px;
+            margin-top: 318px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div></div>
+        <div id="container">
+            <img src="img/0.jpg" id="pic" width="500px">
+        </div>
+        <div></div>
+
+    </div>
+    <script>
+        var num = 1;
+        function changePicture(){
+            //获取pic的元素img
+           var pic =  document.getElementById("pic");
+           //更改src
+           pic.src="img/" + num+".jpg";
+           if(num == 4){
+              num =0;
+           }else{
+            num++;
+           }
+           
+        }
+
+        //每3秒调用一次
+        setInterval("changePicture()",3000)
+    </script>
+</body>
+</html>

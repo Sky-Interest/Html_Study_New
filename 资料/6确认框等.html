@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //alert("hello");//弹窗
+
+        //提示
+        //var score = prompt("请输入一个分数",0);
+        //document.write("您的分数是:" + score);
+
+        //comfirm 
+        /*
+        var result = window.confirm("您确认要删除吗");
+        if(result){
+            document.write("删除成功");
+        }else{
+            document.write("取消了删除动作...")
+        }
+        */
+
+        //输入分数、
+    var score = prompt("请输入您的分数：", "60");
+    //使用swtich进行判断
+    switch (true) {
+        //两种不同的类型会自动进行转换，转成整数类型比较
+        case score >=90 && score <=100:
+            document.write("优秀" + "<br/>");
+            break;
+        case score >=60 && score <90:
+            document.write("及格" + "<br/>");
+            break;
+        case score >=0 && score < 60:
+            document.write("不及格" + "<br/>");
+            break;
+        default:
+            document.write("分数有误" + "<br/>");
+            break;
+    }
+
+
+        document.write("您的分数是:" + score);
+
+    </script>
+</body>
+</html>

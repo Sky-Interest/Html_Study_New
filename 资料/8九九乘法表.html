@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td:hover{
+            color:pink;
+        }
+
+        td{
+            border: 1px solid black;
+           
+        }
+
+        
+    </style>
+</head>
+<body>
+    <script>
+        var num = prompt("请输入乘法表的行数","9");
+        document.write("<h1>" + num + "*" + num +"乘法表</h1><br>");
+
+        document.write("<table>");
+        for(var i=1;i<=num;i++){
+            //开始行
+            document.write("<tr>");
+                for(var j=1;j<=i;j++){
+                    //开始的列
+                    document.write("<td>");
+                    //打印 列和行的数 和 积
+                    document.write(j + "*" + i +"=" + (j*i))
+                    document.write("</td>");
+                }
+            //开始行
+            document.write("</tr>");
+        }
+    </script>
+</body>
+</html>

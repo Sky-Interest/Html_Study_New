@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function sum(a,b,c) {
+        alert(a+b+c);
+    }
+        //定义函数
+    function sum(a,b) {
+        //输出隐藏数组长度
+        document.write("arguments长度：" + arguments.length + "<hr/>");
+        //输出数组中的每个元素
+        for (var i = 0; i < arguments.length; i++) {
+           document.write(i + "->"  + arguments[i] + "<br/>");
+        }
+        //输出形参
+        document.write("a=" + a +  "<br/>");
+        document.write("b=" + b +  "<br/>");
+    }
+
+    /*//定义同名的函数*/
+    function sum(a) {
+        alert(2);
+    }
+
+    //调用，在JS中没有函数的重载，后面定义的同名函数会覆盖前面的函数，与参数列数的个数无关
+    sum(3,5,8);
+    </script>
+</body>
+</html>

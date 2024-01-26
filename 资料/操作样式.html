@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .two{
+            font-size: 50px;
+            color: red;
+            font-family: 隶书;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">
+        我是第一段
+    </p>
+    <p id="p2">
+        我是第二段
+    </p>
+    <hr>
+    <input type="button" value="改变几个样式" onclick="changeCss()">
+    <input type="button" value="改变类样式" onclick="changeClass()">
+
+    <script>
+        function changeCss(){
+            //获取p1元素
+            var p1 = document.getElementById("p1");
+            //操作样式
+            p1.style.fontSize="50px";
+            p1.style.color = "red";
+            p1.style.fontFamily="隶书";
+        }
+
+        function changeClass(){
+            document.getElementById("p2").className = "two";
+        }
+    </script>
+</body>
+</html>

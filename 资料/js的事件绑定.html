@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮1" id="b1" onclick="clickMe()">
+    <input type="button" value="按钮2" id="b2">
+
+    <script>
+        function clickMe(){
+            alert("点击了我...")
+        }
+
+        //当文档加载完毕之后执行
+        window.onload = function(){
+            //获取按钮2
+            var b2 = document.getElementById("b2");
+            //给这个按钮绑定事件
+            b2.onclick = function(){
+                alert("匿名函数")
+            }
+        }
+
+        function hello(){
+            alert("hello")
+        }
+    </script>
+
+</body>
+</html>

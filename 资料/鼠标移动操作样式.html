@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #info {
+            /*设置样式让info这个div不可见*/
+            display: none;
+            border: 1px dashed black;
+            width: 200px;
+            height: 30px;
+            text-align: center;
+            /*上下居中*/
+            line-height: 30px;
+            border-radius: 5px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://www.baidu.com" id="cz">点我有惊喜哦！~</a>
+    <div id="info">您将要访问百度首页！</div>
+
+    <hr>
+    <a href="http://www.baidu.com" id="py">皮影戏图片~</a><br>
+    <img id="img" src="0.jpg" style="width: 180px;">
+    <script>
+        window.onload = function(){
+            var cz = document.getElementById("cz");
+
+            //绑定over事件
+            cz.onmouseover = function(){
+                document.getElementById("info").style.display = "block";
+            }
+
+            //绑定out事件
+            cz.onmouseout = function(){
+                document.getElementById("info").style.display = "none";
+            }
+
+            var py = document.getElementById("py");
+            //显示
+            py.onmouseover = function(){
+                document.getElementById("img").style.visibility = "visible";
+            }
+
+            py.onmouseout = function(){
+                document.getElementById("img").style.visibility = "hidden";
+            }
+        }
+    </script>
+</body>
+</html>

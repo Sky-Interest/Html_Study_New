@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+    用户名：<input type="text" id="t1"><br>
+    用户名：<input type="text" id="t2"><br>
+    <hr>
+    <input type="button" value="单击复制/双击清除" id="b1">
+
+    <script>
+        window.onload = function(){
+            //获取b1按钮
+            var b1 = document.getElementById("b1");
+            //绑定单击事件
+            b1.onclick = function(){
+                //获取第一个用户名的值
+                var nameValue = document.getElementById("t1").value;
+                //alert(nameValue);
+                //赋值给第二个用户名
+                document.getElementById("t2").value = nameValue;
+            }
+
+            //绑定双击事件，清除输入框的值
+            b1.ondblclick = function(){
+                //清除掉第一个用户名的值
+                document.getElementById("t1").value = "";
+                //清除掉第二个用户名的值
+                document.getElementById("t2").value = "";
+
+            }
+        }
+    </script>
+</body>
+</html>

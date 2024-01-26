@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = new Array();//长度为0
+        var arr2 = new Array(5);//长度为5
+        var arr3 = [1,2,3,4,5];//长度为5
+        var arr4 = new Array(1,2,3,4,5);//长度为5
+        document.write(typeof(arr) + " " + typeof(arr2) + " " + typeof(arr3) + " " + typeof(arr4) + " ")
+
+        //循环输出数组的值
+        for(var i = 0;i<arr3.length;i++){
+            document.write(arr3[i] +"...");
+        }
+
+        document.write("<br>");
+
+        var arr5 = [6,7,8];
+        document.write(arr3.concat(arr5));
+
+        document.write("<br>");
+        //把Arr3反转并输出 
+        document.write(arr3.reverse());
+
+        //用join("_") 用下划线连接成一个字符串
+        document.write("<br>");
+        //把Arr3反转并输出 
+        document.write(arr3.join("_"));
+
+        var arr6 = ['apple','pear','watermelon','lemon','orange','banana'];
+        document.write("<br>");
+        //把Arr3反转并输出 
+        document.write(arr6.sort());
+
+        //反序
+        var arr7 = [1,5,3,2,2,0,2];
+        //在sort里面要有一个回调函数，按照规则进行排序
+        var arr8 = arr7.sort(function(x,y){
+            return y-x;
+        });
+        document.write("<br>");
+        //把Arr3反转并输出 
+        document.write(arr8);
+
+        //往数组添加元素 
+        arr5.push(9);
+        document.write("<br>");
+        //把Arr3反转并输出 
+        document.write(arr5);
+
+
+        document.write("<br>");
+        //删除 
+        arr5.pop();
+        document.write(arr5);
+    </script>
+</body>
+</html>

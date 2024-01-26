@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="imgs/1.jpg" width="500" id="pic">
+    <hr>
+    <input type="text" id="user"><span id="info" style="color: red"></span>
+    <hr>
+
+    城市：
+    <select id="city">
+        <option value="广州">广州</option>
+        <option value="深圳">深圳</option>
+        <option value="珠海">珠海</option>
+    </select>
+    <hr>
+    英文：<input type="text" id="user2">
+
+
+    <script>
+        window.onload = function(){
+            //获取pic的img元素
+            var img = document.getElementById("pic");
+            //绑定鼠标移上去时的事件
+            img.onmouseover = function(){
+                //document.getElementById("pic").src="imgs/2.jpg";
+                this.src="imgs/2.jpg";
+            }
+
+            //绑定鼠标移出事件
+            img.onmouseout = function(){
+                //document.getElementById("pic").src="imgs/1.jpg";
+                this.src="imgs/1.jpg";
+            }
+
+            //获取user
+            var user = document.getElementById("user");
+            //绑定失去焦点事件
+            user.onblur = function(){
+                //判断
+                if(user.value.length==0){
+                    document.getElementById("info").innerHTML = "这里要输入用户名";
+                }else{
+                    document.getElementById("info").innerHTML = "";
+                }
+            }
+
+            //绑定获得焦点事件
+            user.onfocus = function(){
+                //判断
+                if(user.value.length>0){
+                    document.getElementById("info").innerHTML = "";
+                }
+            }
+
+            //获得城市的下拉选项
+            var city = document.getElementById("city");
+            //绑定选项切换事件
+            city.onchange = function(){
+                alert("切换城市了" + this.value)
+            }
+
+            //获得user2的输入框
+            var user2 = document.getElementById("user2");
+            //绑定change事件
+            user2.onchange = function(){
+                this.value = this.value.toUpperCase();
+            }
+        }
+    </script>
+</body>
+</html>

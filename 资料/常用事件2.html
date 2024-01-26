@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    英文：<input type="text" id="user">
+    <span id="char"></span>
+    <br>
+    <br>
+    <form action="" method="post" id="form" style="height: 150px;">
+        <input type="text" />
+        <input type="button" value="按钮"/>
+    </form>
+    <script>
+        window.onload = function(){
+            //id为user的input元素
+            var user = document.getElementById("user");
+            //绑定事件
+            user.onkeyup = function(){
+                //按下的字母赋值给span
+                document.getElementById("char").innerHTML = user.value;
+            }
+
+            //为user再绑定按下按键但不松开时事件
+            user.onkeypress = function(){
+                document.getElementById("char").innerHTML = event.keyCode;
+            }
+
+            //为form绑定一个事件
+            document.getElementById("form").onkeydown = function(event){
+                //如果是回车键，就提交表单
+                if(event.keyCode==13){
+                    alert("提交表单")
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
